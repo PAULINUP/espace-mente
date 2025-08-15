@@ -1,3 +1,11 @@
+
+
+
+
+![CI](https://github.com/PAULINUP/espace-mente/actions/workflows/ci.yml/badge.svg)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Contribuições](https://img.shields.io/badge/contributions-welcome-success)
+
 # Espace Mente (EM) — Framework Hibrido (IA + Neurociencia + Quantico)
 
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)]()
