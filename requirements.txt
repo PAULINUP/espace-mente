@@ -1,0 +1,8 @@
+torch>=2.1
+transformers>=4.40
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.2
+qiskit>=1.2
+mne>=1.7
+pytest>=8.2

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Se usar este trabalho, por favor cite como abaixo."
+title: "Espace Mente (EM)"
+version: "0.1.0"
+authors:
+  - family-names: "Souza"
+    given-names: "Paulo Geovane da Silva"
+date-released: "2025-08-15"
+repository-code: "https://github.com/PAULINUP/espace-mente"
+license: "MIT"
