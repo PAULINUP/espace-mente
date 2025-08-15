@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
 ## 📚 Exemplos Guiados
 
-* **Saúde mental (apoio não-diagnóstico)**: [`mental_health_pipeline.md`](mental_health_pipeline.md)
+* **Saúde mental (apoio não-diagnóstico)**: [examples/mental_health_pipeline.md](examples/mental_health_pipeline.md)
 * **Logística (caos/scheduling)**: [`exemplos/otimizacao_logistica.md`](exemplos/otimizacao_logistica.md)
 * **Notebook**: `exemplos/notebooks/01_quickstart.ipynb` (em breve)
 
