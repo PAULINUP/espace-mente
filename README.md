@@ -159,7 +159,7 @@ Se este projeto te ajudou, cite:
 }
 ```
 
-Arquivo de citação: [`CITAÇÃO.cff`](CITAÇÃO.cff)
+Arquivo de citação: [CITATION.cff](CITATION.cff)
 
 ---
 
