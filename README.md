@@ -1,117 +1,209 @@
-# Espace Mente (EM) — Framework Hibrido (IA + Neurociencia + Quantico)
+maravilha — segue um **README.md completão**, já com badges e links apontando para **PAULINUP/espace-mente**. É só colar no arquivo `README.md` do repositório.
 
-![CI](https://github.com/PAULINUP/espace-mente/actions/workflows/ci.yml/badge.svg)
+---
+
+````markdown
+# Espace Mente (EM) — IA + Neurociência + Quântico
+
+[![CI](https://github.com/PAULINUP/espace-mente/actions/workflows/ci.yml/badge.svg)](https://github.com/PAULINUP/espace-mente/actions/workflows/ci.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Contribuições](https://img.shields.io/badge/contributions-welcome-success)
+![Status](https://img.shields.io/badge/status-alpha-orange)
 
-O **Espace Mente (EM)** traduz **estados mentais** em **representacoes externas** (arte generativa, otimizacao, visualizacoes) combinando:
-- **SANQ**: Extracao de padroes (EEG/voz/texto) e embeddings
-- **SAPQ**: Simulacao/otimizacao **hibrida** (quantico + classico)
+O **Espace Mente (EM)** é um framework aberto que traduz **estados mentais** em **representações externas** (arte generativa, otimização logística, visualizações 3D), combinando:
 
-> A teoria completa esta em **/docs**. O codigo em **/src** pode ser usado independentemente do manual; verifique licencas na secao **Licencas Multiplas**.
+- **SANQ** — *Sistema de Alinhamento Neural Quântico*: extração de padrões a partir de EEG/voz/texto e conversão para **embeddings**.
+- **SAPQ** — *Sistema de Análise Preditiva Quântica*: simulação/otimização **híbrida** (quântico + clássico) de cenários futuros e decisões.
 
----
-
-## Linha do Tempo (Passado -> Presente -> Futuro)
-
-**Passado (Origem)**  
-- Concepcao da “Quarta Parede” interior e formalizacao como **Espace Mente**  
-- Provas de conceito: traducao mental->arte, otimizacao simples com dados caoticos
-
-**Presente (V0.1.x)**  
-- MVP funcional (`src/mvp/text_to_art.py`)  
-- SANQ inicial: pre-processamento, features e embeddings simples  
-- SAPQ inicial: QUBO/QAOA placeholder + baseline classico (Simulated Annealing)  
-- Testes (pytest), templates de issues/PR, CONTRIBUTING e SECURITY
-
-**Futuro (Roadmap)**  
-- Integracao EEG real (MNE-Python), conectividade e entropias espectrais  
-- SAPQ com Qiskit e mitigacao de erros (NISQ), alem de GNN/LSTM como baseline  
-- Pipelines reprodutiveis e validacoes humanas
+> O repositório contém **código MVP**, **exemplos práticos**, **templates de issues/PR** e **documentação**.  
+> O **manual completo da teoria** está em `/documentos` (licença específica; ver seção **Licença**).
 
 ---
 
-## Arquitetura
+## 🔭 Visão em 30s
+
+- **Missão**: criar uma ponte coerente entre mente e máquina.  
+- **Como**: sinais → **SANQ** → estados latentes → **SAPQ** → outputs (arte/otimização).  
+- **Aplicações**: saúde mental (apoio não-diagnóstico), logística (caos/scheduling), indústria criativa.
+
+---
+
+## 🧠 Arquitetura (alto nível)
 
 ```mermaid
 graph TD
-    A[Input: EEG/Texto/Audio] --> B[SANQ: Pre-processamento & Embeddings]
-    B --> C[SAPQ: Simulacao Hibrida (QUBO/QAOA + Baselines)]
-    C --> D[Output: Arte / Otimizacao / Visualizacao 3D]
-```
+    A[Entrada: EEG/Texto/Áudio] --> B[SANQ: Pré-processamento & Embeddings]
+    B --> C[SAPQ: Simulação Híbrida (QAOA/QUBO + Clássico)]
+    C --> D[Saídas: Arte / Otimização / Visualização 3D]
+````
 
 ---
 
-## Instalacao
+## ⚙️ Instalação
+
 ```bash
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+# clone
+git clone https://github.com/PAULINUP/espace-mente.git
+cd espace-mente
+
+# ambiente
+python -m venv .venv
+# Windows
+. .venv/Scripts/activate
+# Linux/Mac
+# source .venv/bin/activate
+
+# dependências (PT ou EN)
+pip install -r requisitos.txt || pip install -r requirements.txt
 ```
+
+**Requisitos principais (MVP)**
+Python 3.10+ · `torch` · `transformers` · `matplotlib`
+(opcional) `qiskit` para SAPQ · `mne` para EEG
 
 ---
 
-## Quickstart
-MVP texto -> arte (usa transformers):
+## 🚀 Quickstart (MVP: texto → arte)
+
 ```bash
 python src/mvp/text_to_art.py
 ```
 
-Tests:
-```bash
-pytest -q
+Código (resumo):
+
+```python
+from transformers import pipeline
+
+def text_to_art(prompt: str, max_length: int = 60) -> str:
+    generator = pipeline("text-generation", model="gpt2")
+    return generator(prompt, max_length=max_length)[0]["generated_text"]
+
+if __name__ == "__main__":
+    print(text_to_art("Uma paisagem tranquila para reduzir a ansiedade"))
 ```
 
 ---
 
-## Pastas
-```
-/docs            # documentacao e diagramas
-/src/sanq        # sinais, features e embeddings
-/src/sapq        # simulacao/otimizacao (quantico + classico)
-/src/mvp         # exemplos simples executaveis
-/examples        # guias por dominio
-/tests           # testes unitarios
-```
+## 📚 Exemplos Guiados
+
+* **Saúde mental (apoio não-diagnóstico)**: [`exemplos/pipeline_de_saude_mental.md`](exemplos/pipeline_de_saude_mental.md)
+* **Logística (caos/scheduling)**: [`exemplos/otimizacao_logistica.md`](exemplos/otimizacao_logistica.md)
+* **Notebook**: `exemplos/notebooks/01_quickstart.ipynb` (em breve)
+
+> **Aviso**: o projeto **não substitui diagnóstico médico**. Use apenas como ferramenta de apoio.
 
 ---
 
-## Metricas (alvos)
-| Engenharia | Metrica               | Alvo                   |
-|-----------|-----------------------|------------------------|
-| Software  | Tempo de inferencia   | <= 1.2s                |
-| Eletrica  | Consumo energetico    | <= 100W                |
-| Quantica  | Fidelidade (NISQ)     | >= 90% (pos-mitigacao) |
+## 📐 Métricas-Alvo
+
+| Engenharia | Métrica             | Alvo                      |
+| ---------: | ------------------- | ------------------------- |
+|   Software | Tempo de inferência | ≤ **1.2s**                |
+|   Elétrica | Consumo energético  | ≤ **100W**                |
+|   Quântica | Fidelidade (NISQ)   | ≥ **90%** (pós-mitigação) |
 
 ---
 
-## Roadmap
-- Fase 1 (MVP): NLP + arte generativa
-- Fase 2: Integracao EEG (MNE-Python)
-- Fase 3: SAPQ em hardware quantico (QAOA/QUBO)
+## 🗺️ Roadmap
+
+1. **Fase 1 — MVP**: NLP + arte generativa (texto → imagem/descrição).
+2. **Fase 2 — EEG**: integração com **MNE-Python** (pré-processamento, PSD, ICA).
+3. **Fase 3 — SAPQ**: QAOA/QUBO em simulador/hardware NISQ + baselines clássicos (SA/GRASP/LNS).
+
+Acompanhe pelas **Issues** e **Project Boards**.
 
 ---
 
-## Como contribuir
-Veja CONTRIBUTING.md. Sugestoes iniciais:
-- [ ] Implementar sanq/preprocessing.py (filtros/ICA/PSD)
-- [ ] sapq/qaoa.py (QAOA basico com Qiskit)
-- [ ] Baselines classicos (sapq/classical_baselines.py)
-- [ ] Testes unitarios (pytest)
+## 🤝 Como Contribuir
+
+1. Leia [`CONTRIBUINDO.md`](CONTRIBUINDO.md) e o [`CÓDIGO_DE_CONDUTA.md`](CÓDIGO_DE_CONDUTA.md).
+2. Crie um *branch*: `git checkout -b feat/minha-feature`
+3. Instale deps e rode testes: `pytest -q`
+4. Abra um **Pull Request** com descrição do problema/solução e como testar.
+
+**Boas primeiras issues**:
+
+* `feat(sanq): pré-processamento (MNE: filtros/ICA/PSD)`
+* `feat(sapq): QAOA básico (Qiskit)`
+* `feat(sapq): baselines clássicos (SA/GRASP/LNS)`
 
 ---
 
-## Citacao
+## 🧾 Documentação & Manual
+
+* **Manual completo da teoria**: pasta [`/documentos`](documentos/)
+
+  * PDF/DOCX com axiomas, fórmulas, exemplos e validações
+  * *Nota de licença*: a documentação pode ter **licença diferente** do código (ver abaixo).
+
+---
+
+## 🔒 Licença
+
+* **Código**: [MIT](LICENÇA)
+* **Documentação/Teoria (`/documentos`)**: **CC BY-NC-SA 4.0** *ou* “Todos os direitos reservados” conforme arquivo de licença na pasta.
+
+> Em caso de dúvida, considere o **código MIT** e **docs não-comerciais**.
+
+---
+
+## 📄 Citação
+
+Se este projeto te ajudou, cite:
+
 ```
 @software{espace_mente_2025,
-  title = {Espace Mente (EM)},
+  title  = {Espace Mente (EM)},
   author = {Souza, Paulo Geovane da Silva},
-  year = {2025},
-  url = {https://github.com/PAULINUP/espace-mente}
+  year   = {2025},
+  url    = {https://github.com/PAULINUP/espace-mente}
 }
 ```
 
+Arquivo de citação: [`CITAÇÃO.cff`](CITAÇÃO.cff)
+
 ---
 
-## Licencas Multiplas
-- Codigo: MIT (ver LICENSE)
-- Documentacao/Teoria (docs/): CC BY-NC-SA 4.0 ou “Todos os direitos reservados” conforme registro do autor.
+## 🧩 Estrutura do Repositório
+
+```
+espace-mente/
+├── .github/                   # templates de issues/PR e Actions
+├── documentos/                # manual da teoria (PDF/DOCX) e docs
+├── exemplos/                  # guias de uso e notebooks
+├── fonte/                     # código-fonte (sanq/sapq/mvp)
+│   ├── sanq/                  # pré-processamento/embeddings
+│   ├── sapq/                  # quântico + heurísticas clássicas
+│   └── mvp/                   # demos simples
+├── testes/                    # testes unitários (pytest)
+├── requisitos.txt / requirements.txt
+└── README.md
+```
+
+---
+
+## 🙌 Agradecimentos
+
+Comunidade open-source, projetos **MNE-Python**, **Qiskit**, **PyTorch** e colaboradores que contribuírem com dados/validação.
+
+---
+
+> **Contato**: use **Issues**/**Discussions** para dúvidas e propostas.
+> **Segurança**: veja [`SEGURANÇA.md`](SEGURANÇA.md) para reportar vulnerabilidades.
+
+````
+
+---
+
+## Como aplicar rapidamente
+
+No PowerShell, dentro do repo:
+
+```bash
+# criar/atualizar README.md com o conteúdo acima (cole manualmente no editor),
+git add README.md
+git commit -m "docs: README completo para PAULINUP/espace-mente"
+git push
+````
+
+Quer que eu também gere um **index para GitHub Pages** em `/documentos/index.md` e um **Project Board** com o roadmap? Posso te passar os arquivos prontos e os comandos.
