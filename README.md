@@ -1,5 +1,3 @@
-maravilha — segue um **README.md completão**, já com badges e links apontando para **PAULINUP/espace-mente**. É só colar no arquivo `README.md` do repositório.
-
 ---
 
 ````markdown
