@@ -115,7 +115,7 @@ Acompanhe pelas **Issues** e **Project Boards**.
 
 ## 🤝 Como Contribuir
 
-1. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) e o [`CÓDIGO_DE_CONDUTA.md`](CÓDIGO_DE_CONDUTA.md).
+1. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) e o [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
 2. Crie um *branch*: `git checkout -b feat/minha-feature`
 3. Instale deps e rode testes: `pytest -q`
 4. Abra um **Pull Request** com descrição do problema/solução e como testar.
