@@ -130,7 +130,7 @@ Acompanhe pelas **Issues** e **Project Boards**.
 
 ## 🧾 Documentação & Manual
 
-* **Manual completo da teoria**: pasta [`/documentos`](documentos/)
+* **Manual completo da teoria**: pasta [`docs`](docs)
 
   * PDF/DOCX com axiomas, fórmulas, exemplos e validações
   * *Nota de licença*: a documentação pode ter **licença diferente** do código (ver abaixo).
