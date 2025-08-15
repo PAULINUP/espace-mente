@@ -139,7 +139,7 @@ Acompanhe pelas **Issues** e **Project Boards**.
 
 ## 🔒 Licença
 
-* **Código**: [MIT](LICENÇA)
+* **Código**: [MIT](LICENSE)
 * **Documentação/Teoria (`/documentos`)**: **CC BY-NC-SA 4.0** *ou* “Todos os direitos reservados” conforme arquivo de licença na pasta.
 
 > Em caso de dúvida, considere o **código MIT** e **docs não-comerciais**.
