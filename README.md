@@ -188,7 +188,7 @@ Comunidade open-source, projetos **MNE-Python**, **Qiskit**, **PyTorch** e colab
 ---
 
 > **Contato**: use **Issues**/**Discussions** para dúvidas e propostas.
-> **Segurança**: veja [`SECURITY.md`](SEGURANÇA.md) para reportar vulnerabilidades.
+> **Segurança**: veja [`SECURITY.md`](SECURITY.md) para reportar vulnerabilidades.
 
 ````
 
