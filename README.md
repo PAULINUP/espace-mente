@@ -204,5 +204,3 @@ git add README.md
 git commit -m "docs: README completo para PAULINUP/espace-mente"
 git push
 ````
-
-Quer que eu também gere um **index para GitHub Pages** em `/documentos/index.md` e um **Project Board** com o roadmap? Posso te passar os arquivos prontos e os comandos.
